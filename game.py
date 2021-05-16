@@ -1,9 +1,9 @@
 from pygame import *
 
 class GameSprite(sprite.Sprite):
-    def __init__(self, image, x, y, speed, width, height):
+    def __init__(self, file, x, y, speed, width, height):
         super().__init__()
-        self.image = transform.scale(image.load(image), (width, height))
+        self.image = transform.scale(image.load(file), (width, height))
         self.speed = speed
         self.rect = self.image.get_rect()
         self.rect.x = x
@@ -43,3 +43,11 @@ ball = GameSprite("tenis_ball.png", 200, 200, 4, 50, 50)
 
 speed_x = 3
 speed_y = 3
+
+while game:
+    for e in event.get():
+        if e.type == QUIT:
+            game = False
+    
+    display.update()
+    clock.tick(FPS)
