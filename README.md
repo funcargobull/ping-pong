@@ -1,2 +1,2 @@
-# ping-pong
+# Ping Pong
 Python game
