@@ -49,5 +49,15 @@ while game:
         if e.type == QUIT:
             game = False
     
+    if finish != True:
+        window.fill(back)
+        racket1.update_l()
+        racket2.update_r()
+
+        racket1.reset()
+        racket2.reset()
+
+        ball.reset()
+
     display.update()
     clock.tick(FPS)
