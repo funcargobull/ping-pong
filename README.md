@@ -1,4 +1,4 @@
 # Ping Pong
 Python game
 
-# 2 players
+__2 players__
